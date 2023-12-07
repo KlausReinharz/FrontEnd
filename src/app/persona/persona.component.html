@@ -1,0 +1,24 @@
+
+<div class="container mt-5">
+    <h3>Mantenimiento de usuario</h3>
+    <table class="mt-5 table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>identificacion</th>
+                <th>Fecha Nacimiento</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="persona" >
+            <tr *ngFor="let persona of persona" >
+                <td>{{persona.idpersona}}</td>
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.apellido}}</td>
+                <td>{{persona.identificacion}}</td>
+                <td>{{persona.fechanacimiento|date:'dd/MM/yyyy'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
